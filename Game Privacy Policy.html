@@ -1,0 +1,272 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Game Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  /* Layout: sticky contents rail beside a single readable column; stacks on phones. */
+  :root {
+    --bg: #f5f7f9;
+    --surface: #ffffff;
+    --fg: #14202b;
+    --muted: #55646f;
+    --line: #dbe2e8;
+    --accent: #0c7a6a;
+    --accent-ink: #ffffff;
+    --mark-bg: #fff1c2;
+    --mark-fg: #5c4300;
+    --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+    --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f171e;
+      --surface: #16212a;
+      --fg: #e6edf2;
+      --muted: #9aabb8;
+      --line: #263642;
+      --accent: #3fc9b0;
+      --accent-ink: #06231e;
+      --mark-bg: #4a3a0c;
+      --mark-fg: #ffe9a6;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f171e;
+    --surface: #16212a;
+    --fg: #e6edf2;
+    --muted: #9aabb8;
+    --line: #263642;
+    --accent: #3fc9b0;
+    --accent-ink: #06231e;
+    --mark-bg: #4a3a0c;
+    --mark-fg: #ffe9a6;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+  }
+  .wrap { max-width: 1040px; margin-inline: auto; }
+
+  header.top { padding-bottom: 28px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+
+  .layout { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  @media (min-width: 900px) {
+    .layout { grid-template-columns: 220px minmax(0, 1fr); gap: 56px; }
+    nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; }
+  }
+
+  nav.toc h2 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  nav.toc a {
+    display: block;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid var(--line);
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible { color: var(--fg); border-left-color: var(--accent); }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  main { min-width: 0; max-width: 68ch; }
+  section { padding-block: 4px 28px; scroll-margin-top: 24px; }
+  h2.sec {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  h3 { font-size: 1rem; font-weight: 600; margin: 20px 0 6px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.2em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .summary h2 { font-family: var(--font-display); font-size: 1.1rem; margin: 0 0 8px; }
+  .summary ul { margin: 0; }
+
+  .ph {
+    background: var(--mark-bg);
+    color: var(--mark-fg);
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    padding: 1px 5px;
+    border-radius: 3px;
+    white-space: normal;
+  }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin-bottom: 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  tr:last-child td { border-bottom: 0; }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 16px;
+    margin: 0 0 14px;
+  }
+  footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="kicker">Privacy Policy</p>
+    <h1>sbtwork Games Privacy Policy</h1>
+    <p class="meta">
+      <span>Effective: October 12, 2026</span>
+      <span>Applies to: all our games on Google Play</span>
+    </p>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#games">Games covered</a></li>
+        <li><a href="#collect">What we collect</a></li>
+        <li><a href="#ads">Ads and tracking</a></li>
+        <li><a href="#google">Google Play</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#email">If you email us</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <div class="summary">
+        <h2>The short version</h2>
+        <ul>
+          <li>Our games are free to play and have no ads.</li>
+          <li>We do not collect, store, or share any personal information about players.</li>
+          <li>We do not use analytics, tracking, or advertising services.</li>
+          <li>If this ever changes, we will update this policy before the change reaches your device.</li>
+        </ul>
+      </div>
+
+      <section id="who">
+        <h2 class="sec">Who we are</h2>
+        <p>sbtwork ("we", "us") publishes mobile games for Android on Google Play. This one policy applies to every game listed below. In this policy, "the Game" means whichever of our games you are playing.</p>
+        <p>By installing or playing the Game you agree to this policy. If you do not agree, please uninstall the Game.</p>
+      </section>
+
+      <section id="games">
+        <h2 class="sec">Games covered</h2>
+        <p>This policy covers the games below. Every one of them is free, shows no ads, and collects no player data.</p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>Game</th><th>Package name</th><th>Ads</th><th>Player data collected</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Geo Galaxy</td><td>com.sbtwork.geogalaxy</td><td>None</td><td>None</td></tr>
+              <tr><td>Word Collector</td><td>com.sbtwork.wordcollector</td><td>None</td><td>None</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>We will add any future game to this list. If a future game collects data, we will say so here and on its Google Play listing before it is released.</p>
+      </section>
+
+      <section id="collect">
+        <h2 class="sec">What we collect</h2>
+        <p class="callout">Nothing. We do not collect, receive, or store personal information about the people who play our games.</p>
+        <p>The Game does not ask you to create an account, sign in, or give us your name, email address, phone number, location, contacts, photos, or any other personal details. Anything the Game needs to remember, such as your settings or the level you reached, stays on your own device. We cannot see it, and it is removed when you uninstall the Game.</p>
+        <p>Our servers do not receive your device identifiers, advertising ID, IP address, or gameplay activity from the Game.</p>
+      </section>
+
+      <section id="ads">
+        <h2 class="sec">Ads and tracking</h2>
+        <p>The Game contains no advertising. It does not use advertising networks, analytics services, crash-reporting services, or any tool that follows you across apps or websites. Because of that, there is nothing to opt out of and no advertising ID to reset for our games.</p>
+        <p>We do not sell or share information about players, because we do not have any.</p>
+      </section>
+
+      <section id="google">
+        <h2 class="sec">Google Play</h2>
+        <p>You download and update the Game through Google Play. Google collects its own information when you use Google Play, such as your account, purchases, and install and crash statistics that developers can see in aggregate form in Play Console. That collection is controlled by Google, not by us. See the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> for details and for the choices Google gives you.</p>
+        <p>Android may also show you permission prompts or privacy settings for your device. The Game does not ask for permissions it does not need.</p>
+      </section>
+
+      <section id="children">
+        <h2 class="sec">Children</h2>
+        <p>Because we do not collect personal information from anyone, we do not collect it from children either. If you are a parent or guardian and have a question about how the Game treats your child's privacy, contact us using the details below.</p>
+      </section>
+
+      <section id="email">
+        <h2 class="sec">If you email us</h2>
+        <p>If you write to us with feedback or a question, we receive your email address and whatever you choose to tell us. We use it only to reply, we do not share it, and we keep it for as long as we need to answer you and handle any follow-up, then delete it. You can ask us to delete your emails at any time.</p>
+        <p>Depending on where you live, you may have rights over any personal information we hold about you, including the right to ask what we hold, to correct it, or to have it deleted. Since we do not hold player data, these rights apply only to emails you have sent us.</p>
+      </section>
+
+      <section id="changes">
+        <h2 class="sec">Changes to this policy</h2>
+        <p>We may update this policy, for example if we release a game with new features. We will post the new version here and change the effective date at the top. If a change means the Game starts collecting data or showing ads, we will update this policy and the game's Google Play listing before that version is released, and we will tell players in the Game.</p>
+      </section>
+
+      <section id="contact">
+        <h2 class="sec">Contact us</h2>
+        <p>Questions about privacy:</p>
+        <p>
+          sbtwork<br>
+          Email: <span class="ph">superbrainteamwork@gmail.com</span>
+        </p>
+      </section>
+
+      <footer>
+        &copy; 2026 sbtwork. Last updated October 12, 2026.
+      </footer>
+    </main>
+  </div>
+</div>
+
+</body></html>
